@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>content</title>
+    <script>
+      document.getElementById("op1").style.display = "none";
+    </script>
+    <link rel="stylesheet" href="{% static 'web/content2.css' %}" />
+  </head>
+  <body>
+    <div id="head">
+      <img
+        src="{% static 'images/imageH.jpg' %}"
+
+        width="450px"
+        height="100px"
+        style="padding:25px"
+      />
+    </div>
+
+    <ul id="Nav">
+      <li>
+        <a href="#">2020</a>
+        <ul>
+          <li><a href="/lecture/web/">웹</a></li>
+          <li><a href="/lecture/python/">파이썬</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">2021</a>
+        <ul>
+          <li><a href="#">웹</a></li>
+          <li><a href="#">파이썬</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">2022</a>
+        <ul>
+          <li><a href="#">웹</a></li>
+          <li><a href="#">파이썬</a></li>
+        </ul>
+      </li>
+      <li><a href="#">+</a></li>
+    </ul>
+
+    <div id="content">
+      <div></div>
+      <div id="contentdiv">
+        <div id="contenttitle">2020 부트캠프 웹</div>
+        <ul>
+          {% for product in web_list %}
+          <li>
+            <a href="/lecture/web/{{product.id}}"> {{product.lec_name}} </a>
+            <span>{{product.register_date|date:'Y-m-d H:i'}}</span>
+          </li>
+
+
+          {%endfor%}
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </body>
+</html>

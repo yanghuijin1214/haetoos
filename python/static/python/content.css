@@ -1,0 +1,155 @@
+body {
+  margin: 0px;
+  width: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+#head {
+  background-color: rgb(107, 107, 107);
+  height: 150px;
+}
+#Nav {
+  list-style: none;
+  height: 50px;
+  color: white
+  padding: 5px 1px;
+  padding-left: 150px;
+  margin: 0;
+  background: rgb(247, 197, 001);
+}
+
+#Nav li {
+  float: left;
+  position: relative;
+  margin: 5px 30px;
+  padding: 0;
+  color: white
+}
+
+#Nav li a {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px 8px;
+  margin: 0;
+  color: white
+  text-decoration: none;
+
+}
+
+#Nav li:hover > a {
+  background-color: rgb(201, 161, 0);
+  margin: 0;
+  padding: 5px;
+  color: white
+}
+
+#Nav li:hover ul {
+  opacity: 1;
+  color: white
+}
+
+#Nav li:hover ul li {
+  height: 35px;
+  overflow: visible;
+  padding: 0;
+  color: white
+}
+
+#Nav ul li:hover a {
+  background: rgb(247, 197, 001, 0.4);
+  font-weight: bold;
+  color: white
+}
+
+#Nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 105px;
+  background: rgb(247, 197, 001, 0.4);
+  text-align: center;
+  opacity: 0;
+  color: white
+}
+
+#Nav ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  color: white
+}
+
+#Nav ul a {
+  font-weight: normal;
+  color: white
+}
+#textline {
+  margin: 10px;
+  border: 5px solid rgb(255, 255, 255);
+  padding: 5px;
+  margin-left: 700px;
+}
+#search {
+  margin: 10px;
+}
+#content {
+  display: flex;
+}
+#content div {
+  width: 320px;
+  background-color: rgb(244, 244, 244);
+  margin-left: 2px;
+}
+#content #contentdiv {
+  width: 960px;
+  margin: 0px;
+}
+#content #contentdiv #contenttitle {
+  width: 960px;
+  height: 60px;
+  font-size: 40px;
+  margin: 0px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  background-color: rgb(234, 234, 234);
+  border-left: 1px solid rgb(200, 200, 200);
+  border-right: 1px solid rgb(200, 200, 200);
+}
+#content div ul {
+  width: 960px;
+  margin: 0px;
+  height: 1000px;
+  padding: 0px;
+  border-left: 1px solid rgb(200, 200, 200);
+  border-right: 1px solid rgb(200, 200, 200);
+  background-color: rgb(255, 255, 255);
+}
+#content div ul li {
+  width: 960px;
+  height: 100px;
+  margin: 0px;
+  padding: 40px;
+  list-style: none;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  font-size: 20px;
+  padding: 10px;
+  line-height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+#content div ul a {
+  margin-left: 100px;
+}
+#content div ul a:hover {
+  color: rgb(247, 197, 001);
+}
+#content div ul span {
+  margin-right: 100px;
+}

@@ -1,0 +1,129 @@
+{% extends './base.html' %} {% load static %} {% block contents %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>해투스 :: 내가 앞서가는 힘, 해투스</title>
+    <link href="{% static 'login/sign_up_style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      <div class="centered1">
+        <a href="{% url 'login:sign_in' %}"
+          ><img src="{% static 'images/imageH.jpg' %}" height="85" width="530"
+        /></a>
+      </div>
+    </h1>
+    <br /><br />
+    <h2><div class="centered2">회원가입</div></h2>
+
+    <form action="{% url 'login:sign_up'%}" method="POST">
+      {% csrf_token %}
+      <div class="centered2">
+        <fieldset>
+          <table>
+            <tr>
+              <td><br><b>이름</b></td>
+                     <td><br><input type="text" size="35" name="name" placeholder="이름"></td>
+              </td>
+            </tr>
+            <tr>
+              <td><div style="margin: 10px"></div></td>
+            </tr>
+
+            <tr>
+              <td><br /><b>학번</b></td>
+              <td>
+                <br /><input
+                  type="text"
+                  size="35"
+                  name="student_id"
+                  placeholder="학번"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><div style="margin: 10px"></div></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td><br /><b>아이디</b></td>
+              <td>
+                <br /><input
+                  type="text"
+                  size="35"
+                  name="haetoos_id"
+                  placeholder="아이디"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><div style="margin: 10px"></div></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td><br /><b>비밀번호</b></td>
+              <td>
+                <br /><input
+                  type="password"
+                  size="35"
+                  name="haetoos_ps"
+                  placeholder="비밀번호"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><div style="margin: 10px"></div></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td><br /><b>비밀번호확인</b></td>
+              <td>
+                <br /><input
+                  type="password"
+                  size="35"
+                  name="haetoos_ps2"
+                  placeholder="비밀번호 한번 더 입력"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><div style="margin: 10px"></div></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td><br /><b>휴대폰번호</b></td>
+              <td>
+                <br /><input
+                  type="text"
+                  size="35"
+                  name="phone_number"
+                  placeholder="휴대폰번호 (-제외)"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><div style="margin: 10px"></div></td>
+            </tr>
+          </table>
+          {% if message %}
+          <div style="color: red; margin-left: 4px">{{message}}</div>
+          {% endif %}
+        </fieldset>
+      </div>
+      <br />
+      <img
+        src="{%static 'images/해달그림1.png' %}"
+        style="float: right"
+        alt="Haedal"
+      />
+      <input type="image" src="{% static "images/말풍선.png" %}" width="180"
+      height="180" style="float:right" name="Submit" value="가입하기"/>
+    </form>
+  </body>
+</html>
+{% endblock%}

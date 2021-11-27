@@ -1,0 +1,106 @@
+
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>content</title>
+  <link rel="stylesheet" href="{% static 'web/lecturepage.css' %}" />
+</head>
+<body>
+    <div id='head'>
+        <img src ="{% static 'images/imageH.jpg' %}"
+        width="450px"
+        height="100px"
+        style="padding:25px" width="150px" width="150px">
+      </div>
+     <ul id="Nav">
+       <li><a href="#">2020</a>
+         <ul>
+           <li><a href="/lecture/web/">웹</a></li>
+           <li><a href="/lecture/python/">파이썬</a></li>
+         </ul>
+       </li>
+       <li><a href="#">2021</a>
+         <ul>
+           <li><a href="#">웹</a></li>
+           <li><a href="#">파이썬</a></li>
+         </ul>
+       </li>
+       <li><a href="#">2022</a>
+         <ul>
+           <li><a href="#">웹</a></li>
+           <li><a href="#">파이썬</a></li>
+         </ul>
+       </li>
+       <li><a href="#">+</a>
+     </ul>
+
+    <div id="content">
+
+      <div id="contentdiv">
+        <div id="contenttitle">{{web.lec_name}}</div>
+        <div id="date">등록날짜: {{web.register_date|date:'Y-m-d H:i'}}</div>
+        <div id="lecture">{{web.lec_main|safe}}</div>
+
+        <div id="comment">
+        <!--댓글 쓰기-->
+        <form method="POST" action="/lecture/web/write/">
+          {% csrf_token %} {% for field in form %}
+
+          <div id="commentinput"class="form-group">
+            {%ifnotequal field.name 'content'%}
+            <label id="{{field.id_for_label}}" for="{{field.id_for_label}}">{{field.label}}</label>
+            {% endifnotequal %} {% ifequal field.name 'anony'%}
+            <label class="radiotxt">
+              <input class="radio" type="radio" name="anony" value="off" checked />off</label
+            >
+             <label class="radiotxt"><input type="radio"  class="radio" name="anony" value="on" />on</label>
+            {%else%}
+            <input
+              type="{{field.field.widget.input_type}}"
+              class="form-control"
+              id="{{field.id_for_label}}"
+              placeholder="{{field.label}}"
+              name="{{field.name}}"
+              value="{%ifequal field.name 'content' %}{{web.id}}{%endifequal%}"
+            />
+            {%endifequal%}
+          {% if field.errors %}
+          <span style="color: red">{{field.errors}}</span>
+          {% endif %}{% endfor %}
+
+          </div>
+           <button  id="commentbutton" type="submit" class="btn btn-primary">댓글달기</button>
+        </form>
+
+        <!--댓글 목록-->
+        <ul>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">댓글 목록</th>
+              <th scope="col"></th>
+              <th scope="col">작성날짜</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for com in comment %}
+            <tr>
+              <th  id="comcontent" scope="row">{{com.comment}}</td>
+              <td  id="comname" scope="row">
+                {%ifequal com.anony 'off'%} {{com.user}} {%else%} 익명
+                {%endifequal%}
+              </td>
+              <td scope="row">{{com.registered_dttm|date:'Y-m-d H:i'}}</td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </ul>
+        </div>
+      </ul>
+    </div>
+
+    </div>
+</body>
+</html>

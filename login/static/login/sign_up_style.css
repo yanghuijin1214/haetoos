@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(247, 197, 001);
+  margin: 0;
+}
+h2 {
+  background-color: rgb(247, 197, 001);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-size: 35px;
+}
+h1 {
+  background-color: rgb(107, 107, 107);
+  margin: 0;
+  padding: 15px;
+  z-index: 4;
+  width: 100%;
+}
+.centered1 {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(107, 107, 107);
+  z-index: 4;
+}
+.centered2 {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(247, 197, 001);
+}
+fieldset {
+  text-align: left;
+  border: 3px solid;
+  border-radius: 50px;
+  background-color: white;
+  padding: 27px 30px 10px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 520px;
+  width: 450px;
+}
+b {
+  font-size: 18px;
+}
+input {
+  padding: 3px;
+  font-size: 16px;
+}

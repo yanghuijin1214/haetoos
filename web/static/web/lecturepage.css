@@ -1,0 +1,228 @@
+body {
+  margin: 0px;
+}
+#head {
+  background-color: rgb(107, 107, 107);
+  height: 150px;
+}
+#Nav {
+  list-style: none;
+  height: 50px;
+
+  padding: 5px 1px;
+  padding-left: 150px;
+  margin: 0;
+  background: rgb(247, 197, 001);
+}
+
+#Nav li {
+  float: left;
+  position: relative;
+  margin: 5px 30px;
+  padding: 0;
+}
+
+#Nav li a {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px 8px;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+}
+
+#Nav li:hover > a {
+  background-color: rgb(201, 161, 0);
+  margin: 0;
+  padding: 5px;
+}
+
+#Nav li:hover ul {
+  opacity: 1;
+}
+
+#Nav li:hover ul li {
+  height: 35px;
+  overflow: visible;
+  padding: 0;
+}
+
+#Nav ul li:hover a {
+  background: rgb(247, 197, 001, 0.4);
+  font-weight: bold;
+}
+
+#Nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 105px;
+  background: rgb(247, 197, 001, 0.4);
+  text-align: center;
+  opacity: 0;
+}
+
+#Nav ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+#Nav ul a {
+  font-weight: normal;
+  color: black;
+}
+#textline {
+  margin: 10px;
+  border: 5px solid rgb(255, 255, 255);
+  padding: 5px;
+  margin-left: 700px;
+}
+#search {
+  margin: 10px;
+}
+#content {
+  display: flex;
+}
+#content div {
+  width: 320px;
+  background-color: rgb(244, 244, 244);
+  margin-left: 0px;
+}
+#content #contentdiv {
+  width: 962px;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+}
+#content #contentdiv #contenttitle {
+  width: 962px;
+  height: 60px;
+  font-size: 40px;
+  margin: 0px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  background-color: rgb(234, 234, 234);
+
+}
+#content #contentdiv #date {
+  width: 962px;
+  margin: 0px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+
+}
+#content #lecture {
+  padding-left: 81px;
+  padding-right: 81px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 800px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+#comment {
+  margin: 0px;
+}
+#comment ul {
+  width: 962px;
+  margin: 0px;
+  height: 1000px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+}
+#commnet form {
+  width: 962px;
+}
+#comment .form-group {
+  width: 962px;
+  text-align: center;
+}
+#content div ul li {
+  width: 962px;
+  height: 100px;
+  margin: 0px;
+ 
+  list-style: none;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  font-size: 20px;
+  
+}
+#content table {
+  width: 962px;
+  text-align: center;
+}
+#content {
+  display: flex;
+  justify-content: center;
+  background-color:  rgb(244, 244, 244);
+}
+
+#contentdiv{
+  border: 1px solid rgb(200, 200, 200);
+}
+
+
+#commentbutton{
+  float: right;
+  position: relative;
+  left: 0px;
+  top: -110px;
+  padding: 20px;
+  background-color: rgb(247, 197, 001);
+  color: white;
+  font-weight:bold;
+  border: 1px solid rgb(244,244,244);
+}
+#id_comment{
+float:bottom;
+padding: 20px;
+position: relative;
+right: 30px;
+top: -10px;
+}
+
+#id_anony{
+  float:left;
+  margin-left:40px;
+  margin-right:60px;
+}
+.form-control{
+width:700px;height:58.4px;font-size:12px;
+padding : 3px;
+margin : 20px;
+position: relative;
+right: 0px;
+top: -10px;
+}
+
+.radiotxt{
+   position: relative;
+   right: 400px;
+}
+.radio{
+  position: relative;
+  right: 0px;
+  margin-left:20px;
+}
+#blank{
+  background-color: rgb(244,244,244);
+}
+#content table{
+   border: 1px solid rgb(200,200,200);
+   margin-top: 30px;
+   border-collapse: collapse;
+}
+th, td {
+  border: 1px solid rgb(200,200,200);
+  border-left: 0px solid rgb(255,255,255);
+  padding: 11px;
+}
+#comcontent{
+   width: 70%;
+}
+#comname{
+   width: 15%;
+}
